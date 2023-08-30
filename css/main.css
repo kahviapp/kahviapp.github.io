@@ -3,33 +3,40 @@ body {
     margin: 0;
     font-family: Tahoma, sans-serif; 
     font-size: 1em;
+    display: flex;
+    height: 100%;
+    background-color: #292929;
+
+    --s: 84px; /* control the size */
+    
+    --c: #fff;
+    --a:from -30deg at;
+    background:
+        linear-gradient(#0000 50%,#0004 0),
+        conic-gradient(var(--a) 90%,var(--c) 240deg,#0000    0),
+        conic-gradient(var(--a) 75%,#91734d  240deg,#0000    0),
+        conic-gradient(var(--a) 25%,#0000    240deg,var(--c) 0),
+        conic-gradient(var(--a) 40%,var(--c) 240deg,#d7918d  0);
+    background-size: calc(1.5*var(--s)) var(--s);
 }
 
 header {
     padding: 0;
     margin: 0;
-    background-color: #292929;
-
-    --s: 84px; /* control the size*/
-    --c1: #f2f2f2;
-    --c2: #cdcbcc;
-    --c3: #999999;
-    
-    --_g: 0 120deg,#0000 0;
-    background:
-        conic-gradient(from    0deg at calc(500%/6) calc(100%/3),var(--c3) var(--_g)),
-        conic-gradient(from -120deg at calc(100%/6) calc(100%/3),var(--c2) var(--_g)),
-        conic-gradient(from  120deg at calc(100%/3) calc(500%/6),var(--c1) var(--_g)),
-        conic-gradient(from  120deg at calc(200%/3) calc(500%/6),var(--c1) var(--_g)),
-        conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
-        conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
-        conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
-    background-size: calc(var(--s)*1.732) var(--s);
+    background-color: white;
+    width: fit-content;
+    height: inherit;
+    float: left;
+    display: flow-root;
 }
 
 content {
-    padding: 2em;
-    position: fixed;
+    padding: 2.5rem;
+    margin: 4rem;
+    float: left;
+    background-color: white;
+    display: flow-root;
+    width: 70%;
 }
 
 p {
@@ -38,13 +45,40 @@ p {
 }
 
 header p {
-    padding: 1em;
-    width: 13em;
+    padding: 2.5rem;
     text-align: center;
-    background-color: white;
-    opacity: 0.7;
 }
 
 header p pre {
-    font-size: 2em;
+    font-size: 2rem;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: initial;
+}
+
+nav hr {
+    margin: 10px;
+    border: 0.5px solid #ccc;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0.80em;
+    margin: 5px 0;
+    background-color: #91734d;
+    text-align: center;
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
 }
