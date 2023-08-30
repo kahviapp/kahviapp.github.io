@@ -72,13 +72,19 @@ nav ul {
 nav ul li {
     padding: 0.80em;
     margin: 0.80em 0;
-    background-color: #91734d;
     text-align: center;
     list-style: none;
     font-size: 0.9rem;
+    color: #555;
 }
 
-nav ul li a {
+nav ul li:hover {
+    background-color: #d7918d;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav ul a {
     text-decoration: none;
-    color: white;
+    color: #555;
 }
