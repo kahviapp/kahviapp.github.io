@@ -36,7 +36,7 @@ content {
     float: left;
     background-color: white;
     display: flow-root;
-    width: 70%;
+    width: 60%;
 }
 
 p {
@@ -79,7 +79,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: #d7918d;
+    background-color: #004241;
     color: #fff;
     transition: 0.3s;
 }
@@ -88,3 +88,101 @@ nav ul a {
     text-decoration: none;
     color: #555;
 }
+
+.container {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.segment > * {
+    margin: 47px 70px 47px 47px;
+}
+
+.segment > svg {
+    margin-top: 48px;
+}
+
+.headers {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 39px;
+    color: hsl(0, 0%, 95%);
+
+    margin-top: -15px;
+}
+
+#sedans {
+    background-color: #d7918d;
+    margin-right: 10px;
+}
+
+#suvs {
+    background-color: #91734d;
+}
+
+#luxury {
+    background-color: #004241;
+    margin-left: 10px;
+}
+
+.learn-btn {
+    margin-top: 35px;
+    height: 46px;
+    width: 145px;
+
+    border: none;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.learn-btn:hover{
+    cursor: pointer;
+    border: 2px solid hsl(0, 0%, 95%);
+    background-color: transparent;
+}
+
+#sedans-btn {
+    color: #d7918d;
+}
+#sedans-btn:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+#suvs-btn {
+    color: #91734d;
+}
+#suvs-btn:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+#luxury-btn {
+    color: #004241;
+}
+#luxury-btn:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 325px;
+    }
+
+    .segment {
+        height: 440px;
+    }
+
+    #sedans {
+        border-radius: 10px 10px 0 0;
+    }
+    #luxury {
+        border-radius: 0 0 10px 10px;
+        margin-left: 0;
+    }
+
+    .description {
+        margin-bottom: -10px;
+    }
+  }
